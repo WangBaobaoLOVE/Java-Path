@@ -54,3 +54,36 @@ Problem Driven
 ```
 
 `Program 3 计算$\frac{10.5+2*3}{45-3.5}$`
+```java
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        System.out.println((10.5 + 2 * 3) / (45 - 3.5));
+    }
+}
+```
+
+```
+0.39759036144578314
+```
+
+## Displaying Text in a Message Dialog Box
+
+The program in `Program 1 `displays the text on the console. You can rewrite the program to display the text in a message dialog box. To do so, you need to use the `showMessageDialog` method in the `JOptionPane` class. `JOptionPane` is one of the many
+predefined classes in the Java library that you can reuse rather than “reinvent the wheel.” You can use the `showMessageDialog` method to display any text in a message dialog box. 
+
+`Program 4 窗口信息`
+```java
+import javax.swing.JOptionPane;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        JOptionPane.showMessageDialog(null,"Welcome to Java!");
+    }
+}
+```
+
+![](./images/showMessageDialog.png)
