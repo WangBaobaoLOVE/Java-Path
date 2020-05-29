@@ -6,8 +6,7 @@ Java已经变得非常流行。 它的迅速发展和广泛接受可以追溯到
 
 ## The Java Language Specification, API, JDK, and IDE
 
-Java syntax is defined in the Java language specification, and the Java library is defined in the Java API. The JDK is the software for developing and running Java programs. An IDE is an integrated development environment for rapidly developing
-programs.
+Java syntax is defined in the Java language specification, and the Java library is defined in the Java API. The JDK is the software for developing and running Java programs. An IDE is an integrated development environment for rapidly developing programs.
 
 ## A Simple Java Program
 
@@ -87,3 +86,27 @@ public class Main {
 ```
 
 ![](./images/showMessageDialog.png)
+
+1. The first argument can always be null. null is a Java keyword.
+2. The second argument is a string for text to be displayed.
+
+`Program 5 窗口信息`
+```java
+JOptionPane.showMessageDialog(null,
+                "Welcome to Java!",
+                "Display Message",
+                JOptionPane.INFORMATION_MESSAGE);
+```
+
+![](./images/showMessageDialog2.png)
+
+1. The first argument can always be null. null is a Java keyword.
+2. The second argument is a string for text to be displayed. 
+3. The third argument is a string for the title of the message
+box. 
+4. The fourth argument can be `JOptionPane.INFORMATION_MESSAGE`, which causes `the information icon(i)` to be displayed in the message box
+
+## Programming Style and Documentation
+
+Good programming style and proper documentation make a program easy to read and help programmers prevent errors.
+
