@@ -8,7 +8,7 @@
 3. Selections（`if`,`switch`）
 4. Loops(`while`, `do while`, `for`)
 5. Methods
-6. 
+6. Singal dimensional arrays
 7. 
 
 ## Part II Object-Oriented Programming

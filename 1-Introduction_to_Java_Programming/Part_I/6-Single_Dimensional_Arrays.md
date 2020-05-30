@@ -120,3 +120,116 @@ System.arraycopy(sourceArray, 0, targetArray, 0, sourceArray.length);
 ## Passing Arrays to Methods
 When passing an array to a method, the reference of the array is passed to the method.
 
+```java
+
+        int x = 1; // x represents an int value
+        int[] y = new int[10]; // y represents an array of int values
+
+        m(x, y); // Invoke m with arguments x and y
+
+        System.out.println("x is " + x);
+        System.out.println("y[0] is " + y[0]);
+
+   public static void m(int number, int[] numbers) {
+        number = 1001; // Assign a new value to number
+        numbers[0] = 5555; // Assign a new value to numbers[0]
+    }
+```
+
+## Returning an Array from a Method
+When a method returns an array, the reference of the array is returned.
+
+```java
+        int[] list1 = {1, 2, 3, 4, 5, 6};
+        int[] list2 = reverse(list1);
+        System.out.println(Arrays.toString(list1));
+        System.out.println(Arrays.toString(list2));
+
+    public static int[] reverse(int[] list) {
+        int[] result = new int[list.length];
+
+        for (int i = 0, j = result.length - 1;
+             i < list.length; i++, j--) {
+            result[j] = list[i];
+        }
+
+        return result;
+    }
+```
+
+```java
+[1, 2, 3, 4, 5, 6]
+[6, 5, 4, 3, 2, 1]
+```
+
+## Variable-Length Argument Lists(变长度参数列表)
+A variable number of arguments of the same type can be passed to a method and treated as an array.
+
+```java
+        printMax(34, 3, 3, 2, 56.5);
+        printMax(new double[]{1, 2, 3});
+
+    public static void printMax( double... numbers ) {
+        if (numbers.length == 0) {
+            System.out.println("No argument passed");
+            return;
+        }
+
+        double result = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++)
+            if (numbers[i] > result)
+            result = numbers[i];
+
+        System.out.println("The max value is " + result);
+    }
+```
+
+```java
+The max value is 56.5
+The max value is 3.0
+```
+
+## Searching Arrays
+If an array is sorted, binary search is more efficient than linear search for finding an element in the array.
+
+### The Linear Search Approach
+
+```java
+        int[] list = {1, 4, 4, 2, 5, -3, 6, 2};
+        int i = linearSearch(list, 4); // Returns 1
+        int j = linearSearch(list, -4); // Returns -1
+        int k = linearSearch(list, -3); // Returns 5
+
+        System.out.println(i);
+        System.out.println(j);
+        System.out.println(k);
+
+    public static int linearSearch(int[] list, int key) {
+    for (int i = 0; i < list.length; i++) {
+        if (key == list[i])
+            return i;
+        }
+    return -1;
+    }
+```
+
+```java
+1
+-1
+5
+```
+
+## The Binary Search Approach
+Binary search is the other common search approach for a list of values. For binary search to work, the elements in the array must already be ordered.
+
+![](./images/Binary_search1.png)
+![](./images/Binary_search2.png)
+
+## Sorting Arrays
+There are many strategies for sorting elements in an array. Selection sort and insertion sort are two common approaches.
+
+## The Arrays Class
+The `java.util.Arrays` class contains useful methods for common array operations such as sorting and searching.
+
+The `java.util.Arrays` class contains various static methods for sorting and searching arrays, comparing arrays, filling array elements, and returning a string representation of the array. These methods are overloaded for all primitive types.
